@@ -289,11 +289,11 @@
             }
             else
             {
-                if ([error.domain isEqual:MSALErrorDomain] && error.code == MSALErrorInteractionRequired)
-                {
+                //if ([error.domain isEqual:MSALErrorDomain] && error.code == MSALErrorInteractionRequired)
+                // {
                     CDVPluginResult * pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"No account currently exists"];
                     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-                }
+                // }
                     
                 // Other errors may require trying again later, or reporting authentication problems to the user
             }
